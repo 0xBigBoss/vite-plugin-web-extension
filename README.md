@@ -1,10 +1,14 @@
-# @samrum/vite-plugin-web-extension
+# vite-plugin-web-extension-vite7
 
-[![npm version](https://img.shields.io/npm/v/@samrum/vite-plugin-web-extension)](https://www.npmjs.com/package/@samrum/vite-plugin-web-extension)
-[![node compatibility](https://img.shields.io/node/v/@samrum/vite-plugin-web-extension)](https://nodejs.org/en/about/releases/)
-[![ci](https://github.com/samrum/vite-plugin-web-extension/actions/workflows/ci.yml/badge.svg)](https://github.com/samrum/vite-plugin-web-extension/actions/workflows/ci.yml)
+[![npm version](https://img.shields.io/npm/v/vite-plugin-web-extension-vite7)](https://www.npmjs.com/package/vite-plugin-web-extension-vite7)
+[![node compatibility](https://img.shields.io/node/v/vite-plugin-web-extension-vite7)](https://nodejs.org/en/about/releases/)
+[![ci](https://github.com/0xBigBoss/vite-plugin-web-extension/actions/workflows/ci.yml/badge.svg)](https://github.com/0xBigBoss/vite-plugin-web-extension/actions/workflows/ci.yml)
 
 > Generate cross browser platform, ES module based web extensions.
+
+**✨ This fork includes Vite 7.1.3 support with modernized dependencies and improved TypeScript handling.**
+
+Based on the original work by [@samrum](https://github.com/samrum/vite-plugin-web-extension).
 
 - Manifest V2 & V3 Support
 - Completely ES module based extensions
@@ -35,7 +39,7 @@ Check the README of the generated extension for usage information.
 Requires Vite 3+
 
 ```sh
-npm install @samrum/vite-plugin-web-extension
+npm install vite-plugin-web-extension-vite7
 ```
 
 ### Examples
@@ -47,7 +51,7 @@ vite.config.js:
 
 ```js
 import { defineConfig } from "vite";
-import webExtension from "@samrum/vite-plugin-web-extension";
+import webExtension from "vite-plugin-web-extension-vite7";
 
 export default defineConfig({
   plugins: [
@@ -75,7 +79,7 @@ vite.config.js:
 
 ```js
 import { defineConfig } from "vite";
-import webExtension from "@samrum/vite-plugin-web-extension";
+import webExtension from "vite-plugin-web-extension-vite7";
 
 export default defineConfig({
   plugins: [
@@ -250,7 +254,7 @@ additionalInputs (optional)
   ```js
   if (import.meta.hot) {
     const { addViteStyleTarget } = await import(
-      "@samrum/vite-plugin-web-extension/client"
+      "vite-plugin-web-extension-vite7/client"
     );
 
     await addViteStyleTarget(appContainer);
@@ -264,7 +268,7 @@ additionalInputs (optional)
 In an [env.d.ts file](https://vitejs.dev/guide/env-and-mode.html#intellisense-for-typescript), add the following type reference to define the plugin specific `import.meta` variables as well as plugin client functions:
 
 ```ts
-/// <reference types="@samrum/vite-plugin-web-extension/client" />
+/// <reference types="vite-plugin-web-extension-vite7/client" />
 ```
 
 ### Browser Support
