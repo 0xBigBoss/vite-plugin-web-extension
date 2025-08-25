@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.4.0](https://github.com/0xBigBoss/vite-plugin-web-extension/compare/v5.1.1...v5.4.0) (2025-08-25)
+
+
+### Features
+
+* upgrade to Vite 7.1.3 and modernize dependency stack ([ddcbc56](https://github.com/0xBigBoss/vite-plugin-web-extension/commit/ddcbc56e60a594715d33825b52c1502f583c4596))
+
+
+### Bug Fixes
+
+* improve Plugin type compatibility across Vite versions ([bd00281](https://github.com/0xBigBoss/vite-plugin-web-extension/commit/bd00281c035e93318e67f0a164490285c79335db))
+
+## [5.3.0](https://github.com/0xBigBoss/vite-plugin-web-extension/compare/v5.1.1...v5.3.0) (2025-08-25)
+
+### Features
+
+- rename package to @0xbigboss/vite-plugin-web-extension v5.2.0 ([531c245](https://github.com/0xBigBoss/vite-plugin-web-extension/commit/531c2451212d409eec6fb746aad740736c379668))
+- target Vite 7 exclusively for type compatibility ([42defb6](https://github.com/0xBigBoss/vite-plugin-web-extension/commit/42defb600a53a98df2636c49a72a849a1f1ec544))
+- upgrade to Vite 7.1.3 and modernize dependency stack ([ddcbc56](https://github.com/0xBigBoss/vite-plugin-web-extension/commit/ddcbc56e60a594715d33825b52c1502f583c4596))
+
+### Bug Fixes
+
+- improve Plugin type compatibility across Vite versions ([14e8400](https://github.com/0xBigBoss/vite-plugin-web-extension/commit/14e8400fc47c9d265339d60646ff5fb865fe6316))
+- improve Plugin type compatibility across Vite versions ([bd00281](https://github.com/0xBigBoss/vite-plugin-web-extension/commit/bd00281c035e93318e67f0a164490285c79335db))
+- improve Plugin type compatibility across Vite versions ([a0e4357](https://github.com/0xBigBoss/vite-plugin-web-extension/commit/a0e4357f7e35f0082a871ef7e924fbe682170b1c))
+
 ### [5.1.1](https://github.com/samrum/vite-plugin-web-extension/compare/v5.1.0...v5.1.1) (2024-09-26)
 
 ### Bug Fixes
