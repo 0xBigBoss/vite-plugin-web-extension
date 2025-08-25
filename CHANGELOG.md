@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.0.0](https://github.com/samrum/vite-plugin-web-extension/compare/v5.1.1...v7.0.0) (2025-08-25)
+
+### ⚠ BREAKING CHANGES
+
+- Upgrade to Vite 7.1.3, requires Node.js 18+
+- Plugin version now aligns with Vite major version for clarity (v7.x = Vite 7 support)
+
+### Features
+
+- upgrade to Vite 7.1.3 and modernize dependency stack ([8f906d3](https://github.com/samrum/vite-plugin-web-extension/commit/8f906d3))
+  - Update Vite from 5.0.7 to 7.1.3 with expanded peer dependency support
+  - Upgrade pnpm from 8.3.1 to 10.15.0 for latest package manager features
+  - Update GitHub Actions workflows to use Node.js 20.x (required for Vite 7)
+  - Update snapshots for Vite 7's updated preload helper generation
+  - Bump supporting dependencies to compatible versions:
+    - TypeScript 5.3.3 → 5.5.4, Sass 1.69.5 → 1.70.0, @types/node 20.10.4 → 20.19.0
+  - All tests pass and build succeeds with the new dependency stack
+  - Maintains full backward compatibility for plugin consumers
+
+### Bug Fixes
+
+- improve Plugin type compatibility across Vite versions ([21172f5](https://github.com/samrum/vite-plugin-web-extension/commit/21172f5))
+  - Add VitePlugin type that extends Plugin with flexible hotUpdate signature to resolve TypeScript compatibility issues between different Vite 7.x versions
+
 ### [5.1.1](https://github.com/samrum/vite-plugin-web-extension/compare/v5.1.0...v5.1.1) (2024-09-26)
 
 ### Bug Fixes
