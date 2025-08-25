@@ -1,5 +1,11 @@
 import type { Plugin } from "vite";
 
+// Use a more flexible Plugin type that accommodates different Vite versions
+// by making hotUpdate optional with any signature
+type VitePlugin = Plugin & {
+  hotUpdate?: any;
+};
+
 type WebAccessibleDefinition =
   | {
       matches: string[];
@@ -65,4 +71,6 @@ export interface ViteWebExtensionOptions {
 /**
  * Build cross platform, module-based web extensions using vite
  */
-export default function webExtension(options?: ViteWebExtensionOptions): Plugin;
+export default function webExtension(
+  options?: ViteWebExtensionOptions
+): VitePlugin;

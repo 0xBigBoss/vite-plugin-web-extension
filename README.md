@@ -1,7 +1,7 @@
-# @0xbigboss/vite-plugin-web-extension
+# vite-plugin-web-extension-vite7
 
-[![npm version](https://img.shields.io/npm/v/@0xbigboss/vite-plugin-web-extension)](https://www.npmjs.com/package/@0xbigboss/vite-plugin-web-extension)
-[![node compatibility](https://img.shields.io/node/v/@0xbigboss/vite-plugin-web-extension)](https://nodejs.org/en/about/releases/)
+[![npm version](https://img.shields.io/npm/v/vite-plugin-web-extension-vite7)](https://www.npmjs.com/package/vite-plugin-web-extension-vite7)
+[![node compatibility](https://img.shields.io/node/v/vite-plugin-web-extension-vite7)](https://nodejs.org/en/about/releases/)
 [![ci](https://github.com/0xBigBoss/vite-plugin-web-extension/actions/workflows/ci.yml/badge.svg)](https://github.com/0xBigBoss/vite-plugin-web-extension/actions/workflows/ci.yml)
 
 > Generate cross browser platform, ES module based web extensions.
@@ -27,7 +27,7 @@ Based on the original work by [@samrum](https://github.com/samrum/vite-plugin-we
 Create a new Vite web extension project
 
 ```sh
-npm init @0xbigboss/vite-plugin-web-extension@latest
+npm init @samrum/vite-plugin-web-extension@latest
 ```
 
 Supports choice of Manifest version, TypeScript support, and framework (Preact, React, Solid, Svelte, Vanilla, Vue).
@@ -39,7 +39,7 @@ Check the README of the generated extension for usage information.
 Requires Vite 3+
 
 ```sh
-npm install @0xbigboss/vite-plugin-web-extension
+npm install vite-plugin-web-extension-vite7
 ```
 
 ### Examples
@@ -51,7 +51,7 @@ vite.config.js:
 
 ```js
 import { defineConfig } from "vite";
-import webExtension from "@0xbigboss/vite-plugin-web-extension";
+import webExtension from "vite-plugin-web-extension-vite7";
 
 export default defineConfig({
   plugins: [
@@ -79,7 +79,7 @@ vite.config.js:
 
 ```js
 import { defineConfig } from "vite";
-import webExtension from "@0xbigboss/vite-plugin-web-extension";
+import webExtension from "vite-plugin-web-extension-vite7";
 
 export default defineConfig({
   plugins: [
@@ -254,7 +254,7 @@ additionalInputs (optional)
   ```js
   if (import.meta.hot) {
     const { addViteStyleTarget } = await import(
-      "@0xbigboss/vite-plugin-web-extension/client"
+      "vite-plugin-web-extension-vite7/client"
     );
 
     await addViteStyleTarget(appContainer);
@@ -268,7 +268,7 @@ additionalInputs (optional)
 In an [env.d.ts file](https://vitejs.dev/guide/env-and-mode.html#intellisense-for-typescript), add the following type reference to define the plugin specific `import.meta` variables as well as plugin client functions:
 
 ```ts
-/// <reference types="@0xbigboss/vite-plugin-web-extension/client" />
+/// <reference types="vite-plugin-web-extension-vite7/client" />
 ```
 
 ### Browser Support

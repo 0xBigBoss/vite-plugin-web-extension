@@ -1,5 +1,5 @@
 {
-  "name": "@0xbigboss/vite-plugin-web-extension",
+  "name": "vite-plugin-web-extension-vite7",
   "version": "5.2.0",
   "description": "A vite plugin for generating cross browser platform, ES module based web extensions",
   "main": "./dist/index.cjs",
@@ -38,7 +38,7 @@
     "test:run": "vitest run",
     "prepare": "husky install",
     "prepublishOnly": "pnpm run build",
-    "publish:npm": "npm publish --access public",
+    "publish:npm": "npm publish",
     "release": "standard-version --sign"
   },
   "standard-version": {
