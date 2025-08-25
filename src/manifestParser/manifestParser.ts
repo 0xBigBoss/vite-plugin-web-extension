@@ -4,7 +4,7 @@ import type {
   OutputBundle,
   OutputChunk,
 } from "rollup";
-import type { ResolvedConfig, ViteDevServer } from "vite";
+import type { ResolvedConfig, ViteDevServer, ChunkMetadata } from "vite";
 import type {
   NormalizedAdditionalInput,
   ViteWebExtensionOptions,
@@ -375,8 +375,14 @@ export default abstract class ManifestParser<
       metadata.assets.add(chunkInfo.fileName);
     }
 
-    chunkInfo.viteMetadata!.importedCss.forEach(metadata.css.add, metadata.css);
-    chunkInfo.viteMetadata!.importedAssets.forEach(
+    // Type assertion to access Vite's extended OutputChunk with viteMetadata
+    // Vite augments Rollup's OutputChunk with viteMetadata, but TypeScript doesn't
+    // always recognize this module augmentation properly, so we use type assertion
+    const viteChunk = chunkInfo as OutputChunk & {
+      viteMetadata?: ChunkMetadata;
+    };
+    viteChunk.viteMetadata?.importedCss.forEach(metadata.css.add, metadata.css);
+    viteChunk.viteMetadata?.importedAssets.forEach(
       metadata.assets.add,
       metadata.assets
     );
